@@ -1,0 +1,17 @@
+{"at":0,"kind":"bench","record":{"bench":"b1","fixture":"f8","skills":["inspect"],"duration":5}}
+{"at":0,"kind":"bench","record":{"bench":"b2","fixture":"f8","skills":["inspect"],"duration":4}}
+{"at":1,"kind":"item","record":{"item":"a","rev":1,"skill":"inspect","fixture":"f8","urgency":"regular","deadline":30}}
+{"at":1,"kind":"item","record":{"item":"b","rev":1,"skill":"inspect","fixture":"f8","urgency":"regular","deadline":33}}
+{"at":2,"kind":"job","record":{"id":"repair","requires":[["a@1"],["b@1"]]}}
+{"at":3,"kind":"pull","record":{"bench":"b1","batch":"first","max":2}}
+{"at":4,"kind":"start","record":{"bench":"b1","batch":"first","work":"a@1"}}
+{"at":5,"kind":"item","record":{"item":"u","rev":1,"skill":"inspect","fixture":"f8","urgency":"stopped","deadline":12}}
+{"at":5,"kind":"job","record":{"id":"down","requires":[["u@1"]]}}
+{"at":6,"kind":"pull","record":{"bench":"b1","batch":"urgent","max":1}}
+{"at":7,"kind":"start","record":{"bench":"b1","batch":"first","work":"b@1"}}
+{"at":8,"kind":"pull","record":{"bench":"b2","batch":"reroute","max":1}}
+{"at":9,"kind":"restart","record":{}}
+{"at":10,"kind":"finish","record":{"bench":"b1","batch":"first","work":"a@1","passed":true}}
+{"at":11,"kind":"inspect","record":{"job":"repair"}}
+{"at":12,"kind":"start","record":{"bench":"b1","batch":"first","work":"b@1"}}
+{"at":13,"kind":"inspect","record":{"bench":"b1"}}

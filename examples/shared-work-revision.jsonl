@@ -1,0 +1,14 @@
+{"at":0,"kind":"bench","record":{"bench":"inspect","fixture":"f","skills":["test","review"],"duration":2}}
+{"at":1,"kind":"item","record":{"item":"seal","rev":1,"skill":"test","fixture":"f","urgency":"regular","deadline":20}}
+{"at":2,"kind":"item","record":{"item":"check","rev":1,"skill":"review","fixture":"f","urgency":"regular","deadline":25,"depends":["seal@1"]}}
+{"at":2,"kind":"job","record":{"id":"A","requires":[["seal@1"]]}}
+{"at":2,"kind":"job","record":{"id":"B","requires":[["check@1"]]}}
+{"at":3,"kind":"pull","record":{"bench":"inspect","batch":"shared","max":1}}
+{"at":4,"kind":"start","record":{"bench":"inspect","batch":"shared","work":"seal@1"}}
+{"at":5,"kind":"cancel","record":{"id":"A"}}
+{"at":6,"kind":"item","record":{"item":"seal","rev":2,"skill":"test","fixture":"f","urgency":"regular","deadline":24}}
+{"at":6,"kind":"item","record":{"item":"check","rev":2,"skill":"review","fixture":"f","urgency":"regular","deadline":30,"depends":["seal@2"]}}
+{"at":7,"kind":"amend","record":{"id":"B","requires":[["check@2"]]}}
+{"at":8,"kind":"finish","record":{"bench":"inspect","batch":"shared","work":"seal@1","passed":true}}
+{"at":9,"kind":"inspect","record":{"job":"B"}}
+{"at":10,"kind":"pull","record":{"bench":"inspect","batch":"fresh","max":2}}
